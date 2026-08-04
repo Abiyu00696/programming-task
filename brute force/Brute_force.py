@@ -18,7 +18,9 @@ pin, count_attempt = brt_frc(SECRET_PASS)
 
 end_time = time.time()
 time_taken = end_time - start_time 
-print("\n\n=================================")
-print(f"PIN: {pin}")
+print()
+print("="*20)
+print(f"PIN Fund: {pin}")
 print("Time taken: ","%.2f" % time_taken,"sec")
 print(f"No of attempt: {count_attempt}")
+print("="*20)
