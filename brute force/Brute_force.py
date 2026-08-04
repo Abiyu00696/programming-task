@@ -2,21 +2,23 @@ import time
 
 start_time = time.time()
 def brt_frc(SECRET_PASS):
-    print("++++ BRUTE FORCE PASSWORD GUESSER +++++")
+    print("+++++ BRUTE FORCE PASSWORD GUESSER +++++")
     attempt = 0
-
-    for i in range(10000):
+    count_attempt = 0
+    for i in range(0, 10000):
         if i == SECRET_PASS:
-            return i
-        print(f"Attempting {i}")
+            return i ,count_attempt
+        print(f"Attempting {str(i).zfill(4)}")
+        count_attempt += 1 
 
 
 SECRET_PASS = 4669
 
-pin = brt_frc(SECRET_PASS)
+pin, count_attempt = brt_frc(SECRET_PASS)
 
 end_time = time.time()
 time_taken = end_time - start_time 
-
-print(pin)
-print(time_taken)
+print("\n\n=================================")
+print(f"PIN: {pin}")
+print("Time taken: ","%.2f" % time_taken,"sec")
+print(f"No of attempt: {count_attempt}")
