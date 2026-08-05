@@ -14,7 +14,7 @@ def lock(lock_time):
 running = True
 allowed_attempt = 5
 attempt = 1
-lock_time = 60
+lock_time = 5
 
 print("++++ Welcome User +++++")
 while running:
