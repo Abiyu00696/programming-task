@@ -1,17 +1,10 @@
 import time
-
+from datetime import datetime, timedelta
 user_info = {
 
     "james" : "pa55w0rd",
     "john" : "h3ll0",
     "robert" : "n07ing",
-    "michael" : "z3rr0",
-    "william" : "g0n3",
-    "david" : "1o5t",
-    "richard" : "urb35t",
-    "charles" : "t3I3gram",
-    "joseph" : "halu",
-    "thomas" : "b00s",
     "admin" : "admin"
 }
 def lock(lock_time):
@@ -26,8 +19,11 @@ lock_time = 5
 print("++++ Welcome User +++++")
 while running:
     if attempt > allowed_attempt:
+        current_time = datetime.now()
+        print(f"Current time attemmpt {current_time}")
         print("You have used all your allowd attempt")
-        print(f"Pleas wait {lock_time / 60} min. and try again")
+        print(f"Pleas wait {lock_time / 60} min and try again")
+        
         lock(lock_time)
         attempt = 0
     
