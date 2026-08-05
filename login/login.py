@@ -14,23 +14,28 @@ def lock(lock_time):
 running = True
 allowed_attempt = 5
 attempt = 1
-lock_time = 5
+lock_time = 60
 
 print("++++ Welcome User +++++")
 while running:
     if attempt > allowed_attempt:
         current_time = datetime.now()
-        print(f"Current time attemmpt {current_time}")
-        print("You have used all your allowd attempt")
-        print(f"Pleas wait {lock_time / 60} min and try again")
+        unlock_time = current_time + timedelta(seconds=lock_time)
+        print("---------------------------------------")
+
+        print("You have used all your allowd attempt\n")
+        print(f"Current time: {current_time.strftime('%H:%M:%S')}")
         
+        print(f"Pleas wait {lock_time / 60} min until {unlock_time.strftime('%H:%M:%S')}")
+        print("System is locked")
+        s
         lock(lock_time)
-        attempt = 0
+        attempt = 1
     
     username = input("Username: ")
     passwd = input("password: ")
 
-    if username in user_info and passwd in user_info[username]:
+    if username in user_info and  user_info[username] == passwd:
         print("\nCorrect credentials")
         print("Login Succuess full")
         running = False
