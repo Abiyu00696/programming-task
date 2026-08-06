@@ -15,5 +15,5 @@ python3 Brute_force.py
 
 ## Notes
 
-The current secret PIN is defined in the script as `4669`.
+The current secret PIN is defined in the script.
 This is a learning example only and should not be used to protect real data.
