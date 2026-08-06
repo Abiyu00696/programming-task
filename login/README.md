@@ -13,16 +13,7 @@ After too many failed attempts, it locks the system for a fixed time before allo
 python3 login.py
 ```
 
-## Default credentials
 
-The demo includes these sample accounts:
-
-| Username | Password |
-| --- | --- |
-| james | pa55w0rd |
-| john | h3ll0 |
-| robert | n07ing |
-| admin | admin |
 
 ## Notes
 
