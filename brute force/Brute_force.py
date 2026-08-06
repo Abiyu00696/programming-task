@@ -3,12 +3,13 @@ import time
 start_time = time.time()
 def brt_frc(SECRET_PASS):
     print("+++++ BRUTE FORCE PASSWORD GUESSER +++++")
-    attempt = 0
+
     count_attempt = 0
-    for i in range(0, 10000):
+    for i in range(10000):
         if i == SECRET_PASS:
             return i ,count_attempt
         print(f"Attempting {str(i).zfill(4)}")
+
         count_attempt += 1 
 
 
